@@ -341,6 +341,77 @@
         .article_disclaimer p {
             margin: 0;
         }
+
+        .site_footer {
+            background: #101827;
+            color: #d5deea;
+            padding: 40px 0;
+            margin-top: 50px;
+            border-top: 4px solid #1769aa;
+        }
+
+        .footer_about,
+        .footer_navigation {
+            width: min(100%-40px, 1040px);
+            margin-inline: auto;
+        }
+
+        .site_footer {
+            display: grid;
+            grid-template-columns: 1.4fr 1fr;
+            gap: 35px;
+        }
+
+        .footer_about h2 {
+            color: #ffffff;
+            font-size: 24px;
+            margin-bottom: 10px;
+            font-weight: 800;
+        }
+
+        .footer_about p {
+            color: #aebbd0;
+            font-size: 14px;
+            line-height: 1.7;
+        }
+
+        .footer_navigation h3 {
+            color: #ffffff;
+            font-size: 16px;
+            margin-bottom: 14px;
+        }
+
+        .footer_navigation ul {
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px 20px;
+        }
+
+        .footer_navigation a {
+            color: #b9c9dc;
+            text-decoration: none;
+            font-size: 14px;
+            transition: color 0.2s ease;
+        }
+
+        .footer_navigation a:hover {
+            color: #69b8f2;
+        }
+
+        .footer_navigation a:focus-visible {
+            outline: 2px solid #69b8f2;
+            outline-offset: 4px;
+        }
+
+        /*телефон*/
+        @media (max-width: 600px) {
+            .site_footer {
+                grid-template-columns: 1fr;
+                gap: 25px;
+                padding: 30px 0;
+            }
+        }
     </style>
 </head>
 <body>
