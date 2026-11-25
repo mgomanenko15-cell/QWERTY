@@ -1,0 +1,126 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #222222;
+    background-color: #f5f6f8;
+}
+
+.site-footer {
+    background-color: #202936;
+    color: #ffffff;
+
+    padding: 40px 30px 20px;
+
+    display: grid;
+
+    grid-template-columns:
+        2fr 1fr 1fr 1.5fr;
+
+    gap: 35px;
+
+    width: 100%;
+}
+
+
+.footer-about h2 {
+    font-size: 25px;
+    margin-top: 0;
+    margin-bottom: 12px;
+}
+
+.footer-about p {
+    color: #bdc7d3;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+
+.site-footer h3 {
+    font-size: 16px;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+
+.site-footer ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.site-footer li {
+    margin-bottom: 10px;
+}
+
+.site-footer a {
+    color: #bdc7d3;
+    text-decoration: none;
+    font-size: 14px;
+
+    transition: color 0.2s ease;
+}
+
+.site-footer a:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+/* Контакты */
+
+.footer-contacts p {
+    color: #bdc7d3;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/* Нижняя часть */
+
+.footer-bottom {
+    grid-column: 1 / -1;
+
+    border-top: 1px solid #46515f;
+
+    padding-top: 20px;
+    margin-top: 10px;
+}
+
+.footer-bottom p {
+    color: #9eabb9;
+    font-size: 12px;
+    line-height: 1.6;
+    margin: 8px 0;
+}
+
+@media (max-width: 768px) {
+
+    .site-footer {
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+        padding: 35px 24px 20px;
+    }
+
+}
+
+
+@media (max-width: 480px) {
+
+    .site-footer {
+        grid-template-columns: 1fr;
+        gap: 25px;
+        padding: 30px 20px 18px;
+    }
+
+    .footer-about h2 {
+        font-size: 22px;
+    }
+
+    .footer-bottom {
+        margin-top: 0;
+    }
+
+}

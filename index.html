@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+    (function(m,e,t,r,i,k,a){
+        m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+        m[i].l=1*new Date();
+        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+    })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=114682249', 'ym');
+
+    ym(114682249, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/114682249" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="РИО Новости - учебный информационный проект">
+    <meta name="theme-color" content="#101827">
+    <meta name="theme-color" content="#ffffff">
+
+    <title>Федор и метод треугольника-чем все это может обернуться?</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+        :root {
+            --ink: #172033;
+            --muted: #718096;
+            --brand: #1769aa;
+            --surface: #ffffff;
+            --page: #f1f4f8;
+            --line: #e5eaf0;
+            --radius: 18px;
+            --shadow: 0 16px 45px rgba(20, 36,60, .08);
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            background: var(--page);
+            color: var(--ink);
+            font: 16px/1.7 system-ui, Arial, sans-serif;
+            overflow-wrap: anywhere;
+        }
+
+        a {
+            color: inherit;
+        }
+
+        .site-header {
+            background: #101827;
+            color: white;
+            border-bottom: 4px solid var(--brand);
+        }
+
+        .header-inner,
+        .container,
+        .footer-inner {
+            width: min(100%-40px, 1040px);
+            margin-inline: auto;
+        }
+
+        .header-inner {
+            min-height: 76px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 24px;
+        }
+
+        .brand {
+            color: white;
+            text-decoration: none;
+            font-size: 25px;
+            font-weight: 850;
+            letter-spacing: -.8px;
+        }
+
+        .brand span {
+            color: #69b8f2;
+        }
+
+        .header-label {
+            color: #b9c5d6;
+            font-size: 13px;
+            text-align: right;
+        }
+        
+
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #f5f6f8;
+            color: #222;
+            line-height: 1.7;
+            overflow-wrap: break-word;
+        }
+        .container {
+            width: min(100%-32px, 900px);
+            margin: 35px auto;
+        }
+
+        .article {
+            background-color: #ffffff;
+            padding: 40px;
+            border-radius: 14px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+        }
+
+        .views {
+            display: inline-block;
+            color: #888;
+            font-size: 14px;
+            margin-bottom: 18px;
+        }
+
+        .article_title {
+            font-size: clamp(26px, 4vw, 36px);
+            line-height: 1.25;
+            font-weight: 700;
+            margin-bottom: 28px;
+            color: #171717;
+        }
+        .article_announce {
+            background-color: #f2f5f9;
+            border-left: 4px solid #2764a5;
+            border-radius: 6px;
+            padding: 22px 24px;
+            margin-bottom: 30px;
+        } 
+
+        .article_announce-label {
+            font-size: 17px;
+            font-weight: 700;
+            margin-bottom: 12px;
+        }
+
+        .article_announce ul {
+            padding-left: 22px;
+        }
+
+        .article_announce li {
+            margin-bottom: 8px;
+        }
+
+        .article_announce li:last-child {
+            margin-bottom: 0;
+        }
+
+        .article_media img {
+            display: block;
+            width: 100%;
+            height: auto;
+            aspect-ratio: 16 / 9;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        .article_media figcaption {
+            font-size: 13px;
+            color: #888;
+            margin-top: 9px;
+            line-height: 1.5;
+        }
+
+        .article_body {
+            font-size: 17px;
+            line-height: 1.8;
+        }
+
+        .article_body p {
+            margin-bottom: 20px;
+        }
+
+        .article_body .lead {
+            font-weight: 500;
+        }
+
+        .article_body blockquote {
+            border-left: 4px solid #2764a5;
+            padding: 12px 20px;
+            margin: 25px 0;
+            background: #f7f8fa;
+            color: #444;
+            font-style: italic;
+        }
+
+        .article_body blockquote p {
+            margin: 0;
+        }
+
+        .article_tags {
+            border-top: 1px solid #e8e8e8;
+            padding-top: 22px;
+            margin-top: 35px;
+        }
+
+        .article_tags-ladel {
+            font-size: 14px;
+            font-weight: 700;
+            margin-bottom: 12px;
+        }
+
+        .article_tags ul {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            list-style: none;
+        }
+
+        .article_tags a {
+            display: inline-block;
+            text-decoration: none;
+            background: #f0f2f5;
+            color: #444;
+            padding: 7px 13px;
+            border-radius: 20px;
+            font-size: 13px;
+            transition: background 0.2s, color 0.2s;
+        }
+
+        .article_tags a:hover {
+            background: #2764a5;
+            color: #fff;
+        }
+
+        .article_tags a:focus-visible {
+            outline: 2px solid #2764a5;
+            outline-offset: 3px;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                width: 20px auto;
+            }
+
+            .article {
+                padding: 28px;
+            }
+
+            .article_body {
+                font-size: 16px;
+            }
+        }
+
+
+        @media (max-width: 480px) {
+            .container {
+                width: 100%;
+                margin: 0;
+            }
+
+            .article {
+                padding: 20px 16px;
+                border-radius: 0;
+                box-shadow: none;
+            }
+
+            .article_tittle {
+                font-size: 25px;
+                margin-bottom: 22px;
+            }
+
+            .article_announce {
+                padding: 17px;
+                margin-bottom: 23px;
+            }
+
+            .article_announce-label {
+                font-size: 16px;
+            }
+
+            .article_mediaimg {
+                border-radius: 7px;
+            }
+
+            .article_body {
+                font-size: 16px;
+                line-height: 1.7;
+            }
+
+            .article_body p {
+                margin-bottom: 17px;
+            }
+
+            .article_body blockquote {
+                padding: 12px 15px;
+            }
+
+            .article_tags ul {
+                gap: 8px;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            html {
+                scroll-behavior: auto;
+            }
+
+            *,
+            *::before,
+            *::after {
+                transition-duration: 0.01ms !important;
+            }
+        }
+
+        .article_disclaimer {
+            margin-top: 25px;
+            padding-top: 15px;
+            border-top: 1px solid #e8e8e8;
+            color: #999;
+            font-size: 11px;
+            line-height: 1.6;
+        }
+
+        .article_date {
+            margin-bottom: 7px;
+            font-weight: 600;
+            color: #888;
+        }
+
+        .article_disclaimer p {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <main class="container">
+        <article class="article">
+            <div class="views">
+                <span>4212</span> просмотров
+            </div>
+            <h1 class="article_title">Федор-инопланетянин или пришелец?</h1>
+            <section class="article_announce">
+                <div class="article_announce-label">
+                    Краткий пересказ от РИО ИИ
+                </div>
+                <ul>
+                    <li>
+                        Минпросвещения России предложило снести здание ДГТУ.
+                    </li>
+                    <li>
+                        Вместо бывшего университета построят ресторан "Вкусно и точка".
+                    </li>
+                    <li>
+                        Здесь могла быть ваша реклама.
+                    </li>
+                </ul>
+            </section>
+            <figure class="article_media">
+                <img 
+                    src="https://cdnn21.imgria.ru/images/07e9/0a/01/2045584025_0:160:3072:1888_1920x1080_80_0_0_bfcf33d124bc5d4ca352ec544dfb1151.jpg.webp"
+                    alt="Здание чисто по приколу"
+                    width="1920"
+                    height="1080"
+                    fetchpriority="high"
+                >
+
+                <figcaption>
+                    РИО Новости / Матвей Гоманенко.
+                    Здание Министерства просвещения России. Архивное фото
+                </figcaption>
+            </figure>
+
+            <section class="article_body">
+                <p class="lead">
+                    <strong>МОСКВА, 23 окт - РИО Новости.</strong>
+                    Минпросвещения предложило утвердить единый образец удостоверения учителя, следует из проекта постановления, с которым ознакомилось РИА Новости.
+                </p>
+                <blockquote>
+                    <p>
+                        "Утвердить прилагаемые: единый образец удостоверения, подтверждающего статус учителя в Российской Федерации", — говорится в тексте.
+                    </p>
+                </blockquote>
+
+                <p>
+                    Из описания удостоверения следует, что оно будет сделано в виде пластиковой карты или книжечки. Все реквизиты указываются на русском языке в соответствии с единым образцом.
+                </p>
+
+                <p>
+                    На оборотной стороне карты будут отображаться уникальный номер, фамилия, имя, отчество (при наличии), должность и место работы владельца. Также там разместят голографический защитный элемент и полосы цветов российского флага. Книжечка, в свою очередь, будет иметь размер 90 на 65 миллиметров в закрытом виде, обложка — бордового цвета.
+Отмечается, что работодатель должен не позднее одного рабочего дня после вступления трудового договора учителя в силу направить в региональную государственную информационную систему в сфере образования сведения, необходимые для оформления удостоверения.
+Президент России Владимир Путин ранее подписал указ о дополнительных мерах поддержки учителей для повышения престижа профессии и создания благоприятных условий работы.
+                </p>
+            </section>
+
+            <footer class="article_tags">
+                <div class="article_disclaimer">
+
+                    <div class="article_date">
+                        Дата публикации: 25 ноября 2026 года
+                    </div>
+
+                    <p>
+                        © 2026. Учебный проект. Все права защищены.
+                    </p>
+
+                    <p>
+                        Данный сайт является вымышленным информационным проектом. Материалы размещены исключительно в ознакомительных, развлекательных и информационных целях. Информация может не соответствовать действительности. Администрация сайта не несет ответственности заа возможные последствия использования опубликованных материалов.
+                    </p>
+                </div>
+                <div class="article_tags-ladel">
+                    Теги:
+                </div>
+
+                <ul>
+                    <li><a href="https://ria.ru/society/">Общество</a></li>
+                    <li><a href="https://ria.ru/world/">В мире</a></li>
+                    <li><a href="https://ria.ru/sport/">Спорт</a></li>
+                    <li><a href="https://ria.ru/culture/">Культура</a></li>
+                </ul>
+            </footer>
+        </article>
+    </main>
+    <footer class="site_footer">
+
+        <div class="footer_about">
+
+            <h2>РИО Новости</h2>
+            <p>
+                Информационный проект о событиях в России и мире.
+            </p>
+        </div>
+
+        <div class="footer_navigation">
+            <h3>Навигация</h3>
+            <ul>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="news.html">Последние новости</a></li>
+                <li><a href="popular.html">Популярное</a></li>
+                <li><a href="about.html">О проекте</a></li>
+            </ul>
+        </div>
+    </footer>
+</body>
+</html>
