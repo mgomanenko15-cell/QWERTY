@@ -412,6 +412,80 @@
                 padding: 30px 0;
             }
         }
+
+        .about_overlay {
+            display: none;
+        position: fixed;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.65);
+        z-index: 9999;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+        }
+
+        .about_overlay.active {
+            display: flex;
+        }
+
+        .about_modal {
+            position: relative;
+            background: #ffffff;
+            color: #263445;
+            width: 100%;
+            max-width: 420px;
+            padding: 30px;
+            border-radius: 16px;
+            box-shadow: 0 15px 50px rgba(0, 0, 0, 0.3);
+            animation: aboutAppear 0.25s ease;
+        }
+
+        .about_modal h2 {
+            color: #1769aa;
+            font-size: 25px;
+            margin-bottom: 18px;
+        }
+
+        .about_modal p {
+            font-size: 15px;
+            line-height: 1.7;
+            margin-bottom: 12px;
+        }
+
+        .about_close {
+    position: absolute;
+    top: 12px;
+    right: 16px;
+    border: none;
+    background: none;
+    color: #65758a;
+    font-size: 30px;
+    cursor: pointer;
+        }
+
+        .about_close:hover {
+            color: #1769aa;
+        }
+
+        .about_bottom {
+            margin-top: 20px;
+            padding-top: 15px;
+            border-top: 1px solid #e5eaf0;
+            color: #1769aa;
+            font-weight: 600;
+            font-size: 14px;
+        }
+
+        @keyframes aboutAppear {
+            from {
+                opacity: 0;
+                transform: translateY(15px) scale(0.97);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
+        }
     </style>
 </head>
 <body>
@@ -543,5 +617,36 @@
             </div>
         </div>
     </div>
+            const aboutButton = document.querySelector(
+            '.footer_navigation a[href="#about"]'
+        );
+
+        const aboutOverlay = document.getElementById('aboutOverlay');
+        const aboutClose = document.getElementById('aboutClose');
+
+        // Открытие окна
+        aboutButton.addEventListener('click', function(event) {
+            event.preventDefault();
+            aboutOverlay.classList.add('active');
+        });
+
+        // Закрытие по крестику
+        aboutClose.addEventListener('click', function() {
+            aboutOverlay.classList.remove('active');
+        });
+
+        // Закрытие при нажатии на затемнённый фон
+        aboutOverlay.addEventListener('click', function(event) {
+            if (event.target === aboutOverlay) {
+                aboutOverlay.classList.remove('active');
+            }
+        });
+
+        // Закрытие клавишей Escape
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape') {
+                aboutOverlay.classList.remove('active');
+            }
+        });
 </body>
 </html>
